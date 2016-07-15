@@ -1,0 +1,20 @@
+{
+  parserClass="org.miker.nek.parser.NekParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Simple"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.miker.nek.psi"
+  psiImplPackage="org.miker.nek.psi.impl"
+
+  elementTypeHolderClass="org.miker.nek.psi.NekTypes"
+  elementTypeClass="org.miker.nek.psi.NekElementType"
+  tokenTypeClass="org.miker.nek.psi.NekTokenType"
+}
+
+nekFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
