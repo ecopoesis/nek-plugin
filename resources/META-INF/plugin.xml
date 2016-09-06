@@ -23,6 +23,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
       <fileTypeFactory implementation="org.miker.nek.NekFileTypeFactory"/>
+      <lang.parserDefinition language="NEK Language" implementationClass="org.miker.nek.NekParserDefinition`"/>
   </extensions>
 
   <actions>
